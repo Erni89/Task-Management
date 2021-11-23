@@ -1,0 +1,30 @@
+<h2>Create New Customer:</h2>
+<form [formGroup]="customerForm" (ngSubmit)="addCustomer()">
+  <mat-form-field appearance="legacy">
+    <mat-label> Full Name</mat-label>
+    <input matInput placeholder="Full Name" formControlName="fullName" />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-error *ngIf="customerForm.controls"> Enter Full Name </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label> Phone Number</mat-label>
+    <input matInput placeholder="Phone Number" formControlName="phoneNumber" />
+    <mat-icon matSuffix>phone</mat-icon>
+    <mat-error *ngIf="customerForm.controls">
+      Enter Phone Number 10 digit</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label> Email Address</mat-label>
+    <input matInput placeholder="pat@example.com" formControlName="email" />
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="customerForm.controls"> Enter Email Address</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label> Job</mat-label>
+    <input matInput placeholder="Job" formControlName="job" />
+    <mat-icon matSuffix>work</mat-icon>
+    <mat-error *ngIf="customerForm.controls"> Enter job </mat-error>
+  </mat-form-field>
+  <button type="submit">Add Customer</button>
+</form>

@@ -1,0 +1,28 @@
+h2 {
+  margin-top: 20px;
+  margin-left: 70px;
+  color: blueviolet;
+}
+form {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.mat-form-field{
+    font-size: large;
+    width: 20vw;
+}
+button{
+    width: 15vw;
+    height: 5vh;
+    border: 0;
+    background-color: cadetblue;
+    font: bold;
+    font-size: large;
+    color: whitesmoke;
+    cursor: pointer;
+    margin-top: 5px;
+}

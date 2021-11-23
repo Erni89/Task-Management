@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+  p {
+    background-color: rgb(85, 152, 194);
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  span{
+      margin: 0 10px;
+      color: rgb(214, 20, 20);
+  }
+  .title{
+      color:rgb(22, 21, 21)
+  }

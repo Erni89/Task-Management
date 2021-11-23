@@ -1,0 +1,10 @@
+h2 {
+  margin-top: 20px;
+  margin-left: 70px;
+  color: rgb(211, 29, 111);
+}
+table {
+  margin: 20px auto;
+  width: 75%;
+  text-align: left;
+}

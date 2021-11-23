@@ -1,0 +1,25 @@
+<h2 *ngIf='allCustomer.length'>Create New Task:</h2>
+<h2 *ngIf='!allCustomer.length'>There are no customer to create tasks</h2>
+
+<form [formGroup]="taskForm" (ngSubmit)="addTask()" *ngIf='allCustomer.length'>
+  <mat-form-field appearance="legacy">
+    <mat-label>Customer</mat-label>
+    <mat-select formControlName="customer">
+      <mat-option *ngFor="let customer of allCustomer" [value]="customer._id">
+        {{ customer.fullName }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="taskForm.controls"> Enter Customer </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label> Description</mat-label>
+    <input
+      matInput
+      placeholder="Task Description"
+      formControlName="description"
+    />
+    <mat-icon matSuffix>description</mat-icon>
+    <mat-error *ngIf="taskForm.controls"> Enter Task description </mat-error>
+  </mat-form-field>
+  <button type="submit">Create Task</button>
+</form>
